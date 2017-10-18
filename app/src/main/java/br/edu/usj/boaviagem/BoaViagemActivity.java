@@ -1,6 +1,7 @@
 package br.edu.usj.boaviagem;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -29,7 +30,8 @@ public class BoaViagemActivity extends Activity {
 
         if(usuarioInformado.equals("usj")
                 && senhaInformada.equals("usj")){
-            //efetuar login
+            Intent intent = new Intent(this, DashboardActivity.class);
+            startActivity(intent);
         }
         else{
             //exibir mensagem erro
