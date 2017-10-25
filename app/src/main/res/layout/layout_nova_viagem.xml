@@ -25,7 +25,7 @@
 
         <TextView
             android:text="@string/destino"
-            android:textSize="26sp"/>
+            android:textSize="22sp"/>
 
         <EditText
             android:id="@+id/id_destino"
@@ -33,7 +33,7 @@
 
         <TextView
             android:text="@string/tipo_viagem"
-            android:textSize="26sp"/>
+            android:textSize="22sp"/>
 
         <RadioGroup
             android:id="@+id/id_tipo_viagem"
@@ -83,7 +83,7 @@
 
         <TextView
             android:text="@string/orcamento"
-            android:textSize="26sp"/>
+            android:textSize="22sp"/>
 
         <EditText
             android:id="@+id/id_orcamento"
@@ -94,7 +94,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:text="@string/quantidade_pessoas"
-                android:textSize="26sp"/>
+                android:textSize="22sp"/>
 
             <EditText
                 android:id="@+id/id_quantidade_pessoas"

@@ -21,6 +21,8 @@
 
         <activity android:name=".NovaViagemActivity" />
 
+        <activity android:name=".NovoGastoActivity" />
+
     </application>
 
 </manifest>
