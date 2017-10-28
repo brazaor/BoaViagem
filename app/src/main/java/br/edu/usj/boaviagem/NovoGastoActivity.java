@@ -6,8 +6,10 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.Spinner;
 
 import java.util.Calendar;
 
@@ -19,6 +21,7 @@ public class NovoGastoActivity extends Activity {
 
     private int ano, mes, dia;
     private Button dataGasto;
+    private Spinner categoria;
 
     private DatePickerDialog.OnDateSetListener listener = new DatePickerDialog.OnDateSetListener() {
         @Override
@@ -43,6 +46,14 @@ public class NovoGastoActivity extends Activity {
         dataGasto = (Button) findViewById(R.id.id_data);
         dataGasto.setText(dia + "/" + (mes+1) + "/" + ano);
 
+        categoria = (Spinner) findViewById(R.id.id_categoria);
+
+        ArrayAdapter<CharSequence> adapter =
+                ArrayAdapter.createFromResource(this,
+                        R.array.categoria_gasto,
+                        android.R.layout.simple_spinner_item);
+        categoria.setAdapter(adapter);
+
     }
 
     public void selecionarData(View view){
@@ -56,5 +67,8 @@ public class NovoGastoActivity extends Activity {
             return new DatePickerDialog(this, listener, ano, mes, dia);
         }
         return null;
+    }
+
+    public void salvar(View view) {
     }
 }

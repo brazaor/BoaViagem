@@ -27,11 +27,13 @@ public class DashboardActivity extends Activity {
                 startActivity(new Intent(this, NovaViagemActivity.class));
                 break;
             case R.id.id_novo_gasto:
+                startActivity(new Intent(this, NovoGastoActivity.class));
+                break;
             case R.id.id_minhas_viagens:
+                startActivity(new Intent(this, ViagemListActivity.class));
+                break;
             case R.id.id_configuracoes:
-                TextView textView = (TextView) view;
-                String opcao = "Opção: "+textView.getText().toString();
-                Toast.makeText(this, opcao, Toast.LENGTH_LONG).show();
+                startActivity(new Intent(this, ConfiguracoesActivity.class));
                 break;
             default:
                 Toast.makeText(this, "Opção inválida" , Toast.LENGTH_LONG).show();
